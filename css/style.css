@@ -1,162 +1,75 @@
 body {
   font-family: Roboto, Helvitica, Arial, sans-serif;
-  margin: 0 auto;
   background: #fafafa;
 }
-
 .main {
-  width: 80%;
-}
-
-.flex-container {
-  /* display: flex; */
-  /* width: 100%; */
-  margin: 0;
-  justify-content: center;
-}
-
-.left-side,
-.right-side {
-  display: inline-block;
-  width: 45%;
-}
-
-.flower-img {
-  width: 350px;
-}
-
-img {
-  /* width: 80%; */
-  margin-top: 100px;
-}
-
-.site-logo {
-  width: 80%;
-  margin: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-form {
-  width: 100%;
-}
-
-form input {
-  width: 80%;
-  padding: 9px 0 7px 8px;
-  box-sizing: border-box;
-  height: 36px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  background: #fafafa;
-}
-
-.form-container {
-  width: 350px;
-  border: 1px solid black;
-  padding: 10px;
-  background: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.form-container h1 {
-  text-align: center;
-}
-
-.form-container h2 {
-  text-align: center;
-  color: #999;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 20px;
-  margin: 0 40px 10px;
-}
-
-.form-container p {
-  text-align: center;
-  color: #999;
-}
-
-.t-and-cs {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 2em;
-
-}
-
-.custom-hr {
-  letter-spacing: -1px;
-}
-
-.button {
-    background-color: #3897f0;
-    color: white;
-    padding: 5px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 26px;
-    cursor: pointer;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    width: 80%;
-}
-
-.form-login {
-  margin: 10px 0;
-  padding: 10px 0;
-  border: 1px solid black;
-  height: 40px;
-  width: 350px;
-  text-align: center;
-  background: white;
-  display: block;
-}
-
-.form-login a {
-  text-decoration: none;
-  color: #3897f0;
-}
-
-.apple-android-imgs {
-  width: 90%;
-  /* text-align: center; */
   margin: 0 auto;
-}
-
-.apple-dwnld,
-.android-dwnld {
-  width: 30%;
-  /* display: inline-block; */
-}
-
-.main-footer {
-  width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 80%;
   text-align: center;
 }
+.left, .right {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0 0;
+  width: 49%;
+  height: 600px;
+}
+.left {
+  background-color: #bf00ff;
 
+}
+.right {
+  background-color: #ff0023;
+}
+
+
+/* FOOTER */
 .main-footer footer {
   display: inline-block;
   margin-right: 50px;
 }
-
 .footer-left a {
   text-decoration: none;
   color: #003569;
   font-size: 12px;
   font-weight: 800;
 }
-
 .footer-right {
   color: #999;
   font-size: 12px;
   margin-bottom: 20px;
   padding-top: 20px;
   font-weight: 800;
+}
+
+
+/* Up to 400px, meet conditions = set divs to 100% of screen */
+@media screen and (max-width: 400px) {
+  .right {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-right {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 910px) {
+  .right {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-right {
+    width: 100%;
+  }
 }
