@@ -1,16 +1,24 @@
 body {
   font-family: Roboto, Helvitica, Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   background: #fafafa;
 }
 
+.main {
+  width: 80%;
+}
+
 .flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
+  /* display: flex; */
+  /* width: 100%; */
   margin: 0;
   justify-content: center;
+}
+
+.left-side,
+.right-side {
+  display: inline-block;
+  width: 45%;
 }
 
 .flower-img {
@@ -18,7 +26,7 @@ body {
 }
 
 img {
-  width: 80%;
+  /* width: 80%; */
   margin-top: 100px;
 }
 
@@ -44,7 +52,7 @@ form input {
 }
 
 .form-container {
-  max-width: 350px;
+  width: 350px;
   border: 1px solid black;
   padding: 10px;
   background: white;
@@ -106,11 +114,24 @@ form input {
   width: 350px;
   text-align: center;
   background: white;
+  display: block;
 }
 
 .form-login a {
   text-decoration: none;
   color: #3897f0;
+}
+
+.apple-android-imgs {
+  width: 90%;
+  /* text-align: center; */
+  margin: 0 auto;
+}
+
+.apple-dwnld,
+.android-dwnld {
+  width: 30%;
+  /* display: inline-block; */
 }
 
 .main-footer {
