@@ -1,29 +1,154 @@
 body {
-  font-family: Roboto, Helvitica, Arial, sans-serif;
-  background: #fafafa;
+  background: #f0f0f0;
+  font-family: sans-serif;
+  color: #939393;
 }
-.main {
-  margin: 0 auto;
-  width: 80%;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box; /* Use border box for inclusive box-model measurements */
+  max-width: 750px; /* Set the max width for responsiveness */
+  margin: 50px auto; /* Center it */
+}
+
+.container .left,
+.container .right  {
+  width: 50%; /* set each half to 50% of total parent width */
+  margin: 0 10px;
+}
+
+/* Left Start */
+.left {
+  display: flex; /* Set the parent to display:flex */
+  height:100%;
+  width:100%;
+}
+.left img {
+  transform: translateY(10%);
+}
+/* Left END */
+
+/* Top START */
+/* Right START */
+.right {
+  flex-direction: column;
+  flex-wrap: wrap; /* Set to wrap so inline items move to next line */
+}
+.right .top {
+  flex: auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #c6c6c6;
+  border-radius: 2px;
+}
+.right .top .logo {
+  margin-top: 10px;
+  margin-bottom:0;
+  width:180px;
+}
+.right .top h3 {
+  margin-top: 0;
+  color: #939393;
+  font-size: 16px;
+}
+.right .top h3,
+.right .top .h-rule {
   text-align: center;
 }
-.left, .right {
-  display: inline-block;
-  border: 1px solid black;
-  margin: 0 0;
-  width: 49%;
-  height: 600px;
+.top h4 {
+  width:100%;
+  margin: 25px 0 20px;
+  border-bottom: 1px solid #939393;
+  line-height: 0.01em;
+  font-size: 16px;
+  text-align:center;
 }
-.left {
-  background-color: #bf00ff;
-
+.top h4 span {
+  background: #fff;
+  padding: 0 20px;
 }
-.right {
-  background-color: #ff0023;
+.right .top button {
+  background: #3897f0;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  font-weight: 600;
+}
+/* Form START */
+form {
+  width: 100%;
+  flex-direction: column;
+  border: #939393;
+}
+form input {
+  width: 100%;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+form input[type="submit"] {
+  background: #3897f0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+.T-and-C {
+  text-align: center;
+  padding-top: 5px;
+}
+.T-and-C a {
+  text-decoration: none;
+  color:inherit;
+}
+/* Form END */
+/* Top END */
+
+/* Middle Start */
+.middle {
+  text-align: center;
+  background: #ffffff;
+  margin-top: 10px;
+  border: 1px solid #c6c6c6;
+  border-radius: 2px;
+}
+.middle p {
+  padding: 15px;
+}
+.middle a {
+  text-decoration: none;
+  color:#3897f0;
+}
+/* Middle End */
+
+/* Bottom Start */
+.bottom {
+  text-align: center;
 }
 
+.bottom p {
+  margin-bottom: 0;
+  color: #585858
+}
 
-/* FOOTER */
+.bottom .apps {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+/* Bottom END */
+
+
+/* Footer START */
+.main-footer {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
 .main-footer footer {
   display: inline-block;
   margin-right: 50px;
@@ -33,6 +158,7 @@ body {
   color: #003569;
   font-size: 12px;
   font-weight: 800;
+  margin-right: 10px;
 }
 .footer-right {
   color: #999;
@@ -41,35 +167,20 @@ body {
   padding-top: 20px;
   font-weight: 800;
 }
+/* Footer END */
 
-
-/* Up to 400px, meet conditions = set divs to 100% of screen */
-@media screen and (max-width: 400px) {
-  .right {
-    width: 100%;
-  }
-  .left {
+/* Media Query - Makes the left scetion (phone img) disappear at smaller screen sizes */
+@media screen and (max-width: 800px) {
+  .container .left {
     display: none;
   }
-  .footer-left {
+  .container {
+    display: flex;
     width: 100%;
+    justify-content: center;
+    text-align: center;
   }
-  .footer-right {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 910px) {
-  .right {
-    width: 100%;
-  }
-  .left {
-    display: none;
-  }
-  .footer-left {
-    width: 100%;
-  }
-  .footer-right {
-    width: 100%;
+  .container .right {
+    width: 350px;
   }
 }
